@@ -17,7 +17,7 @@ const SignIn = () => {
     }
 
     setLoading(true);
-    fetch("/signin", {
+    fetch("http://localhost:4000/signin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -86,9 +86,15 @@ const SignIn = () => {
         <p style={{ textAlign: 'center' }}>
           <Link to="/reset">Forgot your password?</Link>
         </p>
+
+         {/* Footer Text */}
+        <p style={{ textAlign: 'center', fontSize: '12px', marginTop: '20px', color: '#888' }}>
+          Created by <strong>Harshit Pandey</strong>
+        </p>
       </div>
     </div>
   );
+  
 };
 
 export default SignIn;
